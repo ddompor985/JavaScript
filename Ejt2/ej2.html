@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript EJ 2</title>
+  </head>
+  <body>
+    <h2>Results</h2>
+    <div id="results"></div>
+
+    <script>
+      const num1 = parseFloat(prompt("Give me a number"));
+      const num2 = parseFloat(prompt("Give me another number"));
+
+      //addition
+      let addition = num1 + num2;
+      //substraction
+      let subtraction = num1 - num2;
+      //multiplication
+      let multiplication = num1 * num2;
+
+      // Display arithmetic results
+      const arithmeticResults = `
+            ${num1} plus ${num2} is ${addition}<br>
+            ${num1} minus ${num2} is ${subtraction}<br>
+            ${num1} times ${num2} is ${multiplication}<br>
+        `;
+
+        // Perform boolean operations
+        const isNum1Greater = num1 > num2;
+        const isNum1Equal = num1 === num2;
+        const isNum1LessOrEqual = num1 <= num2;
+
+        // Display boolean results
+        const booleanResults = `
+            Is ${num1} greater than ${num2}? ${isNum1Greater}<br>
+            Is ${num1} equal to ${num2}? ${isNum1Equal}<br>
+            Is ${num1} less than or equal to ${num2}? ${isNum1LessOrEqual}<br>
+        `;
+
+        // Combine and display all results
+        document.getElementById('results').innerHTML = arithmeticResults + booleanResults;
+    </script>
+  </body>
+</html>
