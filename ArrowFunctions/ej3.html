@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript EJ 3</title>
+  </head>
+  <body>
+    <p id="listNum"></p>
+
+    <script>
+    
+
+      function filterPositiveNumbers(arr) {
+        let positiveNumbers = []; 
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] > 0) {
+            positiveNumbers.push(arr[i]);
+          }
+        }
+        return positiveNumbers; 
+      }
+
+    
+      const numbers = [-2, 8,-1, 2, -3];
+      const positiveNumbers = filterPositiveNumbers(numbers);
+      console.log(positiveNumbers); 
+    </script>
+  </body>
+</html>
