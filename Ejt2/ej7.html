@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Example 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        #results {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h2>Fruit Finder</h2>
+    <div id="results"></div>
+
+    <script>
+        const fruits = ["pineapple", "apple", "banana", "orange", "lemon"];
+        const positionInput = prompt("Enter the position of the fruit (0-4):");
+
+        // Convert input to an integer
+        const position = parseInt(positionInput);
+
+        if (Number.isInteger(position) && position >= 0 && position < fruits.length) {
+            const fruit = fruits[position];
+            document.getElementById("results").textContent = `The fruit at position ${position} is: ${fruit}`;
+            console.log(`The fruit at position ${position} is: ${fruit}`);
+        } else {
+            document.getElementById("results").textContent = "Invalid position. Please enter a number between 0 and 4.";
+            console.log("Invalid position. Please enter a number between 0 and 4.");
+        }
+    </script>
+</body>
+</html>
