@@ -27,17 +27,16 @@
             ${num1} times ${num2} is ${multiplication}<br>
         `;
 
-        // Perform boolean operations
+        // Boolean operations
         const isNum1Greater = num1 > num2;
         const isNum1Equal = num1 === num2;
         const isNum1LessOrEqual = num1 <= num2;
 
-        // Display boolean results
+        // Boolean results
         const booleanResults = `
             Is ${num1} greater than ${num2}? ${isNum1Greater}<br>
             Is ${num1} equal to ${num2}? ${isNum1Equal}<br>
-            Is ${num1} less than or equal to ${num2}? ${isNum1LessOrEqual}<br>
-        `;
+            Is ${num1} less than or equal to ${num2}? ${isNum1LessOrEqual}<br>`;
 
         // Combine and display all results
         document.getElementById('results').innerHTML = arithmeticResults + booleanResults;

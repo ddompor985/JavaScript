@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript EJ 3</title>
+  </head>
+  <body>
+    <h3>The results of the class</h3>
+    <p id="result"></p>
+
+    <p id="demo"></p>
+
+    <script>
+      //Only four grades are requested
+      function CalculateAverage(uno, dos, tres, cuatro) {
+        let sum = uno + dos + tres + cuatro;
+        let average = sum / 4;
+        return average;
+      }
+      //Asking for the 4 grades
+      try {
+        const value1 = parseFloat(prompt("First mark"));
+        const value2 = parseFloat(prompt("Second mark"));
+        const value3 = parseFloat(prompt("Third mark"));
+        const value4 = parseFloat(prompt("Fourth mark"));
+
+        let average = CalculateAverage(value1, value2, value3, value4);
+        console.log(average);
+        document.getElementById("result").innerHTML = average;
+
+      } catch (Exception) {
+        document.getElementById("demo").innerHTML = Exception.name;
+      }
+    </script>
+  </body>
+</html>
