@@ -12,6 +12,19 @@
             padding: 10px;
             /* Espacio interior */
         }
+
+        body {
+            max-width: 30rem;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .second{
+            position: absolute;
+            left: 80%;
+           
+        }
     </style>
 </head>
 
@@ -19,38 +32,38 @@
     <form>
         <fieldset>
             <legend>
-                Datos personales
+                <b>Datos personales</b>
             </legend>
             <table>
                 <tbody>
                     <!-- Primera fila -->
                     <tr>
-                        <td>DNI</td>
+                        <td><b>D.N.I:</b></td>
                         <td>
                             <input aria-describedby="DNI">
                         </td>
                         <td></td>
-                        <td>Sexo:</td>
+                        <td><b>Sexo:</b></td>
                     </tr>
 
                     <!-- Segunda fila -->
                     <tr>
-                        <td>Nombre</td>
+                        <td><b>Nombre:</b></td>
                         <td>
                             <input aria-describedby="Nombres">
                         </td>
                         <td></td>
-                        <td><input type="checkbox"> Hombre</td>
+                        <td><input type="radio" name="sexo"> Hombre</td>
                     </tr>
 
                     <!-- Tercera fila -->
                     <tr>
-                        <td>Apellido</td>
+                        <td><b>Apellido</b></td>
                         <td>
                             <input aria-describedby="Apellido">
                         </td>
                         <td></td>
-                        <td><input type="checkbox"> Mujer</td>
+                        <td><input type="radio" name="sexo"> Mujer</td>
                     </tr>
                     </tr>
                 </tbody>
@@ -58,13 +71,13 @@
         </fieldset>
         <fieldset>
             <legend>
-                Dirección
+                <b>Dirección</b>
             </legend>
             <table>
                 <tbody>
                     <!-- Primera fila -->
                     <tr>
-                        <td>Calle/Avda: </td>
+                        <td><b>Calle/Avda: </b></td>
                         <td>
                             <input aria-describedby="Calle/Avda">
                         </td>
@@ -74,11 +87,11 @@
 
                     <!-- Segunda fila -->
                     <tr>
-                        <td>Población:</td>
+                        <td><b>Población:</b></td>
                         <td>
                             <input aria-describedby="Población">
                         </td>
-                        <td>Provincia:</td>
+                        <td><b>Provincia:</b></td>
                         <td> <label for="lang"></label>
                             <select name="lenguajes" id="lang">
                                 <option value="Almería">Almería</option>
@@ -95,15 +108,15 @@
         </fieldset>
         <fieldset>
             <legend>
-                Práctica en grupo
+                <b> Práctica en grupo</b>
             </legend>
             <table>
                 <tbody>
                     <!-- Primera fila -->
                     <tr>
-                        <td>Archivo: </td>
+                        <td><b>Archivo:</b></td>
                         <td>
-                            <input aria-describedby="Calle/Avda">
+                            <input aria-describedby="Archivo">
                         </td>
                         <td><button>Browse</button></td>
                         <td></td>
@@ -111,25 +124,30 @@
 
                     <!-- Segunda fila -->
                     <tr>
-                        <td>Población:</td>
+                        <td><input type="checkbox">Archivo comprimido</td>
                         <td>
-                            <input aria-describedby="Población">
+                            <input type="checkbox">Archivo encriptado
                         </td>
-                        <td>Provincia:</td>
-                        <td> <label for="lang"></label>
-                            <select name="lenguajes" id="lang">
-                                <option value="Almería">Almería</option>
-                                <option value="Jaén">Jaén</option>
-                                <option value="Murcia">Murcia</option>
-                                <option value="Málaga">Málaga</option>
-                                <option value="Granada">Granada</option>
-                            </select>
+                        </td>
+                        <td></td>
+                        <td>
                         </td>
                     </tr>
+                    <tr>
+                        <td><b>Descripción de la práctica</b></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="5"><input type=""></td>
+                    </tr>
+
 
                 </tbody>
             </table>
         </fieldset>
+
+        <button name="second">Submit</button>
+
+
     </form>
 </body>
 
