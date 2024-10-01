@@ -10,7 +10,7 @@
             border: 2px solid #000;
             /* Ajusta el borde si es necesario */
             padding: 10px;
-            /* Espacio interior */
+            max-width: 100%;
         }
 
         body {
@@ -18,17 +18,16 @@
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-        }
-
-        .second{
-            position: absolute;
-            left: 80%;
            
         }
+        textarea{
+            resize: none;
+        }
+
     </style>
 </head>
 
-<body>
+<body >
     <form>
         <fieldset>
             <legend>
@@ -118,14 +117,16 @@
                         <td>
                             <input aria-describedby="Archivo">
                         </td>
-                        <td><button>Browse</button></td>
+                        <td><input hidden id="btn" class="form-control text-center col-md-6" onChange="document.getElementById('tagsmall').innerText=document.getElementById('btn').files[0]['name'];" type="file" value="Archivo">
+                            <button id='personalizado' onClick="document.getElementById('btn').click();">Browse</button>
+                            <small id='tagsmall'></small></td>
                         <td></td>
                     </tr>
 
                     <!-- Segunda fila -->
                     <tr>
                         <td><input type="checkbox">Archivo comprimido</td>
-                        <td>
+                        <td colspan="2">
                             <input type="checkbox">Archivo encriptado
                         </td>
                         </td>
@@ -137,7 +138,7 @@
                         <td><b>Descripción de la práctica</b></td>
                     </tr>
                     <tr>
-                        <td rowspan="5"><input type=""></td>
+                     <td colspan="3"> <textarea name=""  maxlength="244" id="" cols="56px" rows="5px" ></textarea></td>
                     </tr>
 
 
@@ -145,7 +146,7 @@
             </table>
         </fieldset>
 
-        <button name="second">Submit</button>
+        <input  type="submit" value="Submit Query">
 
 
     </form>
