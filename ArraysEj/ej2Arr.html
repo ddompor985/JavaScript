@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*In this exercise, you will create a function that accepts the components of an email
+sending service and combines them into an email body template. To make things more
+interesting, only adults are eligible to post comments on the website. Accordingly, the
+message text will change.
+function sendEmail(name, age, comments, email)
+- check the passed parameters. If any are invalid or missing, the function will simply
+return null
+- use the ternary operator to check whether this person is of legal age or not.
+sendEmail("Jane", 27, "Your website is fantastic!",”jane@gmail.com”);
+// => "A user has posted a comment from the website:
+// => name: Jane
+// => age: 27
+// => status: Jane is a valid user (jane@gmail.com)
+// => comments: Your website is fantastic!"*/
+
+      function sendEmail(name, age, comments, email) {
+        if (!name || !age || !comments || !email) {
+          return null;
+        }
+
+        //condition ? expressionIfTrue : expressionIfFalse;
+        const status =
+          age >= 18
+            ? `${name} is an user (${email})`
+            : `${name} is not an adult user`;
+
+        // Construct the email body
+        const emailBody =
+          `\"A user has posted a comment from the website:\"\n` +
+          `name: ${name}\n` +
+          `age: ${age}\n` +
+          `status: ${status}\n` +
+          `comments: ${comments}`;
+
+        return emailBody;
+      }
+
+      // Example usage
+      const result = sendEmail(
+        "Jane",
+        27,
+        "Your website is fantastic!",
+        "jane@gmail.com"
+      );
+      console.log(result);
+    </script>
+  </body>
+</html>

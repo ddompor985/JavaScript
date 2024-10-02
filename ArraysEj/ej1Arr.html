@@ -1,57 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <script>
-      /*1. Create a script with 2 string variables. Display both variables between:
-            - single quotation marks
-            - double quotation marks
-            - inverted quotes
-            a) Using traditional string concatenation
-            b) Using string literals*/
-      let string1 = "Characteristics";
-      let string2 = "information";
+        /*1. Create a script with 2 string variables. Display both variables between:
+              - single quotation marks
+              - double quotation marks
+              - inverted quotes
+              a) Using traditional string concatenation
+              b) Using string literals*/
+        let string1 = "Characteristics";
+        let string2 = "information";
 
-      //a
-      console.log(
-        "This prints with simple '" +
-          string2 +
-          "' quotation marks '" +
-          string1 +
-          "'"
-      );
-      console.log(
-        'This prints with double "' +
-          string2 +
-          '" quotation marks "' +
-          string1 +
-          '"'
-      );
-      console.log(
-        "This prints with double \`" +
-          string2 +
-          "\` quotation marks \`" +
-          string1 +
-          "\`"
-      );
+        //a
+        console.log(
+            "This prints with simple '" +
+            string2 +
+            "' quotation marks '" +
+            string1 +
+            "'"
+        );
+        console.log(
+            'This prints with double "' +
+            string2 +
+            '" quotation marks "' + string1 +
+            '"'
+        );
+        console.log(
+            "This prints with double \`" +
+            string2 +
+            "\` quotation marks \`" +
+            string1 +
+            "\`"
+        );
 
-      //b
-      // a
-      console.log(
-        `This prints with simple '${string2}' quotation marks '${string1}'`
-      );
+        //b
+        console.log(
+            `This prints with simple '${string2}' quotation marks '${string1}'`
+        );
 
-      console.log(
-        `This prints with double "${string2}" quotation marks "${string1}"`
-      );
+        console.log(
+            `This prints with double "${string2}" quotation marks "${string1}"`
+        );
 
-      console.log(
-        `This prints with backticks \`${string2}\` quotation marks \`${string1}\``
-      );
+        console.log(
+            `This prints with backticks \`${string2}\` quotation marks \`${string1}\``
+        );
     </script>
-  </body>
+</body>
+
 </html>
