@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Write a JavaScript function to extract a specified number of characters from a string.
+            Test Data :
+            console.log(truncate_string("Robin Singh",4)); "Robi"*/
+
+      function truncate_string(word, num) {
+        if (num >= word.length) {
+          return "the num is bigger than the word given, ERROR";
+        }
+        return word.slice(0, num + 1); //+1 for the user not to confuse
+      }
+
+      console.log(truncate_string("Robin Singh", 4)); // Output: "Robin"
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Write a JavaScript function to convert a string into abbreviated form.
+             Test Data :
+            console.log(abbrev_name("Robin Singh"));
+            "Robin S."*/
+
+      function abbrev_name(word) {
+        let wordArr = word.split(" ", 2);
+        let firstName = wordArr[0];
+        let secondName = wordArr[1].charAt(0); 
+        return `Hello ${firstName} ${secondName}.`; 
+      }
+
+      console.log(abbrev_name("Robin Singh")); // Output: "Robin S."
+    </script>
+  </body>
+</html>
