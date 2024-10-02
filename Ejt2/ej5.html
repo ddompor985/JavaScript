@@ -12,15 +12,15 @@
     <script>
       function diasDelMes(mes) {
         if (mes >= 1 && mes <= 12) {
-          alert(`El mes ${mes} tiene ${diasPorMes[mes]} días.`);
+          alert(`The month ${mes} has ${diasPorMes[mes]} days.`);
         } else {
-          alert("Por favor, ingresa un número de mes válido entre 1 y 12.");
+          alert("Please insert a number between 1 and 12.");
         }
       }
 
       const diasPorMes = {
         1: 31, // enero
-        2: 28, // febrero (29 en años bisiestos)
+        2: 28, // febrero 
         3: 31, // marzo
         4: 30, // abril
         5: 31, // mayo
@@ -34,7 +34,7 @@
       };
 
       // Ejemplo de uso
-      let mes = prompt("Ingresa el número del mes (1-12):");
+      let mes = prompt("Insert the number of the month(1-12):");
       diasDelMes(Number(mes));
     </script>
   </body>

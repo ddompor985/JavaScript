@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const grades = [];
+        let sum = 0;
+
+        let sc = parseFloat(prompt("Insert all of your marks until you are done (enter -1 to finish)"));
+
+        while (sc !== -1) {
+            grades.push(sc);
+            sum += sc;
+            sc = parseFloat(prompt("Insert another mark (enter -1 to finish)"));
+        }
+        let average = sum / grades.length;
+
+        if (average >= 9) {
+            console.log('tu nota de ' + average + ' se denomina como sobresaliente');
+        } else if (average > 7) {
+            console.log('tu nota de ' + average + ' se denomina como notable');
+        } else if (average >= 5) {
+            console.log('tu nota de ' + average + ' se denomina como bien');
+        } else if (average < 5) {
+            console.log('tu nota de ' + average + ' se denomina como insuficiente');
+        } else {
+            console.log("Ha habido un error");
+        }
+
+        console.log(sum);
+        console.log(average);
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--5.b. Create a list of the months of the year, for each month its name, number and number of days are
+recorded.
+Display the names of the months that have 30 days.
+Display the names of even-numbered months.
+Display the total number of days of all months.-->
+    <script>
+        let months = [
+            { name: "Enero", number: 1, days: 31 },
+            { name: "Febrero", number: 2, days: 28 },
+            { name: "Marzo", number: 3, days: 31 },
+            { name: "Abril", number: 4, days: 30 },
+            { name: "Mayo", number: 5, days: 31 },
+            { name: "Junio", number: 6, days: 30 },
+            { name: "Julio", number: 7, days: 31 },
+            { name: "Agosto", number: 8, days: 31 },
+            { name: "Septiembre", number: 9, days: 30 },
+            { name: "Octubre", number: 10, days: 31 },
+            { name: "Noviembre", number: 11, days: 30 },
+            { name: "Diciembre", number: 12, days: 31 }
+        ];
+
+        let monthsWith30Days = months.filter(month => month.days === 30).map(month => month.name);
+        console.log("Months with 30 days are: ", monthsWith30Days);
+
+        let even_months = months.filter(month => month.number % 2 === 0);
+        console.log("Months with even numbers are: ", even_months.map(month => month.name));
+
+        let totalDays = months.reduce((acc, month) => acc + month.days, 0);
+        console.log("Total number of days in all months: ", totalDays);
+
+    </script>
+
+
+</body>
+
+</html>

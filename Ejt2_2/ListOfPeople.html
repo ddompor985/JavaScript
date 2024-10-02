@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let personas = [
+            { nombre: "Antonio", edad: 15 },
+            { nombre: "juan", edad: 18 },
+            { nombre: "pepe", edad: 20 },
+            { nombre: "julian", edad: 21 }
+        ]
+
+        let mayoresEdad = [];
+        personas.forEach(persona => {
+            if (persona.edad >= 18) {
+                mayoresEdad.push(persona);
+            }
+        });
+        mayoresEdad.forEach(p => console.log(p.nombre))
+    </script>
+</body>
+
+</html>

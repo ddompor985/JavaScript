@@ -9,25 +9,19 @@
     <p id="result"></p>
 
     <script>
-        // Request two numbers using prompt
         const num1 = parseFloat(prompt("Enter the first number:"));
         const num2 = parseFloat(prompt("Enter the second number:"));
 
-        // Calculate the sum
         const sum = num1 + num2;
 
-        // Display the sum in the console with line breaks
         console.log("Sum:");
         console.log(sum);
         console.log("\n"); 
 
-        // Display the sum with alert with line breaks
         alert(`Sum:\n${sum}\n`); 
 
-        // Display the sum in the body with line breaks
         document.body.innerHTML += `<p>Sum: ${sum}</p><br>`; 
 
-        // Display the sum in an existing paragraph
         document.getElementById('result').innerHTML = `Sum: ${sum}<br>`;
     </script>
 </body>
