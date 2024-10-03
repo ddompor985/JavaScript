@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function arraysAreEqual(arr1, arr2) {
+        // First, check if the lengths are the same
+        if (arr1.length !== arr2.length) {
+          return false;
+        }
+
+        // Use every to compare elements
+        return arr1.every((element, index) => element === arr2[index]);
+      }
+
+      // Example usage
+      const array1 = [1, 2, 3, 4];
+      const array2 = [1, 2, 3, 4];
+      const array3 = [1, 2, 3, 5];
+
+      console.log(arraysAreEqual(array1, array2)); // true
+      console.log(arraysAreEqual(array1, array3)); // false
+    </script>
+  </body>
+</html>
