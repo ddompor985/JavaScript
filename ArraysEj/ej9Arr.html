@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Write a JavaScript function that takes a string with both lowercase and upper case letters
+            as a parameter. It converts upper case letters to lower case, and lower case letters to
+            upper case.
+            Test Data :
+            console.log(swapcase('AaBbc'));
+            "aAbBC"*/
+            function swapcase(strg) {
+                return strg.split('').map(char => char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()).join('');
+            }
+            console.log(swapcase('AaBbc'));
+    </script>
+</body>
+</html>

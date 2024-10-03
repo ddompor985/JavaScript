@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Write a JavaScript function to parameterize a string.
+        Test Data :
+        console.log(string_parameterize("Robin Singh from USA."));
+        "robin-singh-from-usa"*/
+
+        function string_parameterize(phrase){
+            phrase = phrase.replaceAll(" ", "-");
+            return phrase;
+        }
+        console.log(string_parameterize("Robin Singh from USA."));
+    </script>
+  </body>
+</html>

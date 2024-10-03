@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        Write a JavaScript function that hides email addresses to prevent unauthorized access.
+            Test Data :
+            console.log(protect_email("robin_singh@example.com"));
+            robin...@example.com*/
+      function hideEmailAddres(email) {
+        let stringOfEmail = email.split("@");
+
+        let firstPart = stringOfEmail[0];
+        let domain = "@" + stringOfEmail[1];
+
+        let visibleChars = 4;
+        let hiddenCharsLength = firstPart.length - visibleChars;
+
+        let hiddenMidString =
+          hiddenCharsLength > 0 ? "*".repeat(hiddenCharsLength) : "";
+        console.log(hiddenCharsLength);
+
+        // Combine the visible part, hidden part, and domain
+        return (
+          "The encrypted email is " +
+          firstPart.substring(0, visibleChars) +
+          hiddenMidString +
+          domain
+        );
+      }
+
+      // Test the function
+      console.log(hideEmailAddres("robin_singh@example.com")); // Output: robin...@example.com
+    </script>
+  </body>
+</html>
