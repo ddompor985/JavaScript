@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Array students
+        - FIRSTNAME, LASTNAME, LASTNAME2(Optional)
+        - FIRSNAME, LASTNAME
+        make a function that sorts the array by the last name or lastname 1 depending on the case
+        */
+      function sortStudents(students) {
+        return students.sort((a, b) => {
+          const lastNameA = a[1]; // First last name
+          const lastNameB = b[1]; // First last name
+          const lastName2A = a[2] || ""; // Second last name or empty string
+          const lastName2B = b[2] || ""; // Second last name or empty string
+
+          // Compare first last names
+          if (lastNameA < lastNameB) return -1;
+          if (lastNameA > lastNameB) return 1;
+
+          // If the first last names are the same, compare second last names
+          if (lastName2A < lastName2B) return -1;
+          if (lastName2A > lastName2B) return 1;
+
+          return 0; // Both last names are the same
+        });
+      }
+
+      // Example usage
+      const students = [
+        ["John", "Doe"],
+        ["Jane", "Smith"],
+        ["Alice", "Johnson", "Williams"],
+        ["Bob", "Doe", "Johnson"],
+        ["Charlie", "Brown"],
+      ];
+
+      const sortedStudents = sortStudents(students);
+      console.log(sortedStudents);
+    </script>
+  </body>
+</html>
