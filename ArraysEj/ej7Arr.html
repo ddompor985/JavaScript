@@ -13,7 +13,7 @@
         "robin-singh-from-usa"*/
 
         function string_parameterize(phrase){
-            phrase = phrase.replaceAll(" ", "-");
+            phrase = phrase.toLowerCase().replaceAll(" ", "-");
             return phrase;
         }
         console.log(string_parameterize("Robin Singh from USA."));

@@ -23,7 +23,7 @@ sendEmail("Jane", 27, "Your website is fantastic!",”jane@gmail.com”);
 // => comments: Your website is fantastic!"*/
 
       function sendEmail(name, age, comments, email) {
-        if (!name || !age || !comments || !email) {
+        if (!name || !age || age <0 || !comments || !email) {
           return null;
         }
 
@@ -43,8 +43,6 @@ sendEmail("Jane", 27, "Your website is fantastic!",”jane@gmail.com”);
 
         return emailBody;
       }
-
-      // Example usage
       const result = sendEmail(
         "Jane",
         27,
