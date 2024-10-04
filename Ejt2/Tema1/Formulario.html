@@ -8,7 +8,6 @@
     <style>
         fieldset {
             border: 2px solid #000;
-            /* Ajusta el borde si es necesario */
             padding: 10px;
             max-width: 100%;
         }
@@ -18,17 +17,21 @@
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-           
         }
-        textarea{
+
+        textarea {
             resize: none;
         }
 
+        .submit-container {
+            text-align: center;
+            margin-top: 20px;
+        }
     </style>
 </head>
 
-<body >
-    <form>
+<body>
+    <form action="mailto:dominguezporrasdanieljesus@gmail.com" method="POST" enctype="text/plain">
         <fieldset>
             <legend>
                 <b>Datos personales</b>
@@ -39,7 +42,7 @@
                     <tr>
                         <td><b>D.N.I:</b></td>
                         <td>
-                            <input aria-describedby="DNI">
+                            <input name="dni" aria-describedby="DNI" size="5">
                         </td>
                         <td></td>
                         <td><b>Sexo:</b></td>
@@ -49,21 +52,20 @@
                     <tr>
                         <td><b>Nombre:</b></td>
                         <td>
-                            <input aria-describedby="Nombres">
+                            <input name="nombre" aria-describedby="Nombres" size="20">
                         </td>
                         <td></td>
-                        <td><input type="radio" name="sexo"> Hombre</td>
+                        <td><input type="radio" name="sexo" value="Hombre"> Hombre</td>
                     </tr>
 
                     <!-- Tercera fila -->
                     <tr>
                         <td><b>Apellido</b></td>
                         <td>
-                            <input aria-describedby="Apellido">
+                            <input name="apellido" aria-describedby="Apellido" size="35">
                         </td>
                         <td></td>
-                        <td><input type="radio" name="sexo"> Mujer</td>
-                    </tr>
+                        <td><input type="radio" name="sexo" value="Mujer"> Mujer</td>
                     </tr>
                 </tbody>
             </table>
@@ -77,22 +79,21 @@
                     <!-- Primera fila -->
                     <tr>
                         <td><b>Calle/Avda: </b></td>
-                        <td>
-                            <input aria-describedby="Calle/Avda">
+                        <td colspan="3">
+                            <input name="calle" aria-describedby="Calle/Avda" size="46">
                         </td>
-                        <td></td>
-                        <td></td>
                     </tr>
 
                     <!-- Segunda fila -->
                     <tr>
                         <td><b>Población:</b></td>
                         <td>
-                            <input aria-describedby="Población">
+                            <input name="poblacion" aria-describedby="Población" size="24">
                         </td>
                         <td><b>Provincia:</b></td>
-                        <td> <label for="lang"></label>
-                            <select name="lenguajes" id="lang">
+                        <td>
+                            <label for="lang"></label>
+                            <select name="provincia" id="lang">
                                 <option value="Almería">Almería</option>
                                 <option value="Jaén">Jaén</option>
                                 <option value="Murcia">Murcia</option>
@@ -101,7 +102,6 @@
                             </select>
                         </td>
                     </tr>
-
                 </tbody>
             </table>
         </fieldset>
@@ -115,38 +115,36 @@
                     <tr>
                         <td><b>Archivo:</b></td>
                         <td>
-                            <input aria-describedby="Archivo">
+                            <input name="archivo" aria-describedby="Archivo" size="25" type="text" readonly>
                         </td>
-                        <td><input hidden id="btn" class="form-control text-center col-md-6" onChange="document.getElementById('tagsmall').innerText=document.getElementById('btn').files[0]['name'];" type="file" value="Archivo">
-                            <button id='personalizado' onClick="document.getElementById('btn').click();">Browse</button>
-                            <small id='tagsmall'></small></td>
+                        <td>
+                            <input hidden id="btn" type="file" onChange="document.querySelector('input[name=archivo]').value = this.files[0].name;">
+                            <button type="button" id='personalizado' onClick="document.getElementById('btn').click();">Browse</button>
+                        </td>
                         <td></td>
                     </tr>
 
                     <!-- Segunda fila -->
                     <tr>
-                        <td><input type="checkbox" name="archivo[]">Archivo comprimido</td>
+                        <td><input type="checkbox" name="archivo_comprimido">Archivo comprimido</td>
                         <td colspan="2">
-                            <input type="checkbox" name="archivo[]">Archivo encriptado
-                        </td>
+                            <input type="checkbox" name="archivo_encriptado">Archivo encriptado
                         </td>
                         <td></td>
-                        <td>
-                        </td>
                     </tr>
                     <tr>
-                        <td><b>Descripción de la práctica</b></td>
+                        <td colspan="2"><b>Descripción de la práctica</b></td>
                     </tr>
                     <tr>
-                     <td colspan="3"> <textarea name=""  maxlength="244" id="" cols="56px" rows="5px" ></textarea></td>
+                        <td colspan="3"><textarea name="descripcion" maxlength="244" id="" cols="56px" rows="5px"></textarea></td>
                     </tr>
-
-
                 </tbody>
             </table>
         </fieldset>
 
-        <input type="submit" value="Submit Query">
+        <div class="submit-container">
+            <input type="submit" value="Submit Query">
+        </div>
 
     </form>
 </body>
