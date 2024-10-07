@@ -1,0 +1,50 @@
+{
+    "books": [
+      {
+        "title": "Don Quijote de la Mancha",
+        "genre": "Fiction",
+        "authors": ["Miguel de Cervantes"],
+        "pages": 1023,
+        "published": "1605-01-16",
+        "read": true,
+        "website": ""
+      },
+      {
+        "title": "Cien años de soledad",
+        "genre": "Magical Realism",
+        "authors": ["Gabriel García Márquez"],
+        "pages": 417,
+        "published": "1967-05-30",
+        "read": true,
+        "website": ""
+      },
+      {
+        "title": "La sombra del viento",
+        "genre": "Mystery",
+        "authors": ["Carlos Ruiz Zafón"],
+        "pages": 487,
+        "published": "2001-04-17",
+        "read": true,
+        "website": ""
+      },
+      {
+        "title": "El ingenioso hidalgo Don Quijote de la Mancha",
+        "genre": "Fiction",
+        "authors": ["Miguel de Cervantes"],
+        "pages": 980,
+        "published": "1615-01-01",
+        "read": false,
+        "website": ""
+      },
+      {
+        "title": "Los pilares de la Tierra",
+        "genre": "Historical Fiction",
+        "authors": ["Ken Follett"],
+        "pages": 983,
+        "published": "1989-08-01",
+        "read": true,
+        "website": ""
+      }
+    ]
+  }
+  
