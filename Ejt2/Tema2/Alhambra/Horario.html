@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table {
+        border: 1px solid black;
+
+    }
+
+    th {
+        border: 1px solid black;
+
+
+    }
+
+    td {
+        border: 1px solid black;
+
+    }
+    .textOnTable { 
+        
+        margin-left: 23%; /* Center the text */
+        margin-bottom: 10px; /* Space below the text */
+    }
+</style>
+
+<body>
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
+
+    <h1>Horario de visitas</h1>
+    <div>
+        <p class="textOnTable">Horario de visita a la Alhambra de Granada</p>
+        <table>
+            <thead>
+                <th>Hora</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+                <th>Sabado</th>
+                <th>Domingo</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>9:00-11:00</td>
+                    <td rowspan="4">Cerrado</td>
+                    <td colspan="5">Entrada Individual Normal</td>
+                    <td rowspan="4">Individual y Grupos</td>
+                </tr>
+                <tr>
+                    <td>11:00-14:00</td>
+                    <td>Entrada especial grupos</td>
+                    <td>Entrada especial grupos</td>
+                    <td>Entrada especial grupos</td>
+                    <td>Entrada especial grupos</td>
+                    <td>Entrada especial grupos</td>
+                </tr>
+                <tr>
+                    <td>14:00-16:00</td>
+                    <td>Cerrado</td>
+                    <td>Cerrado</td>
+                    <td>Cerrado</td>
+                    <td>Cerrado</td>
+                    <td>Cerrado</td>
+                </tr>
+                <tr>
+                    <td>16:00-19:00</td>
+                    <td colspan="5">Entrada Individual Normal</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
