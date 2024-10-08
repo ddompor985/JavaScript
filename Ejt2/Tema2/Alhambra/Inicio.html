@@ -10,6 +10,10 @@
             font-size: 20px;
         }
     </style>
+    
+</head>
+<body>
+    <div id="header"></div>
     <script>
         fetch('header.html')
             .then(response => response.text())
@@ -17,10 +21,6 @@
                 document.getElementById('header').innerHTML = data;
             });
     </script>
-</head>
-<body>
-    <div id="header"></div>
-    
     <h2>¿Que es la Alhambra de Granada</h2>
     <hr>
     <p>
