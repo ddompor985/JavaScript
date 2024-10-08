@@ -1,12 +1,12 @@
-// Función que captura los valores de un formulario pasados por get
+// Funcin que captura los valores de un formulario pasados por get
 function obtenerGET()
 {
 	// Capturamos la url
 	var loc = document.location.href;
-	// Si existe el signo de interrogación
+	// Si existe el signo de interrogacin
 	if(loc.indexOf('?')>0)
 	{
-		// Cogemos la parte de la url después de ?
+		// Cogemos la parte de la url despus de ?
 		var getString = loc.split('?')[1];
 		// obtenemos un array con cada nombre=valor
 		var GET = getString.split('&');
@@ -33,7 +33,7 @@ window.onload = function()
 			document.write("<br> Control: "+index+" - Valor: "+valores[index]);
 		}
 	} else {
-		// No se ha recibido ningún parámetro por GET
-		document.write("No se ha recibido ningún parámetro.");
+		// No se ha recibido ningn parï¿½metro por GET
+		document.write("No se ha recibido ningï¿½n parï¿½metro.");
 	}
 }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #imagenAyuntamiento {
+            position: relative;
+            left: 25%;
+            transform: translateX(-50%);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
+    <h2><b>Lista de enlaces externos:</b></h2>
+    <a href="https://www.alhambra.org/partes-alhambra.html"><li>Web de la organización Alhambra</li></a>
+    <a href="https://tickets.alhambra-patronato.es/producto/alhambra-general/"><li>Enlace a la web de venta de entradas</li></a>
+    <a href="https://acortar.link/GUH33t"><li>Enlace a las visitas guiadas</li></a>
+    <a href="https://www.granada.org" id="imagenAyuntamiento"><img src="Images/AyuntamientoImage.jpg" alt="ayuntamiento Image" width="350px"
+            height="225px"></a>
+    <li>Haz click en la imagen para ir a la web del ayuntamiento de Gradana</li>
+</body>
+
+</html>
