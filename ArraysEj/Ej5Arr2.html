@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function csvTo2DArray(csvString) {
+           
+            const rows = csvString.trim().split('\n');
+           
+            const result = rows.map(row => row.split(','));
+            return result;
+        }
+
+  
+        const csvString = `name,age,city
+                            Alice,30,New York
+                            Bob,25,Los Angeles
+                            Charlie,35,Chicago`;
+
+        const array2D = csvTo2DArray(csvString);
+
+        console.log(array2D);
+       
+
+    </script>
+
+</body>
+
+</html>
