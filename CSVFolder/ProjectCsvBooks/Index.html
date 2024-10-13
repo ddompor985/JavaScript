@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libros</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Lista de Libros</h1>
+<div id="book-list"></div>
+<button onclick="showGenres()">Mostrar Géneros</button>
+<button onclick="showBooksOver300Pages()">Libros con más de 300 páginas</button>
+<button onclick="showBooksPublishedMoreThanTwoYearsAgo()">Libros publicados hace más de 2 años</button>
+<button onclick="showAuthorsAndCount()">Autores y número de libros</button>
+<button onclick="showReadBooksOrdered()">Libros leídos ordenados</button>
+
+<div id="output"></div>
+
+<script src="Books.js"></script>
+<script src="Code.js"></script>
+</body>
+</html>
