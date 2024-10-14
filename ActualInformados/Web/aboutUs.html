@@ -5,6 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .content {
+            flex: 1;
+        }
+        footer {
+            background-color: #f1f1f1; 
+            text-align: center;
+            padding: 10px 0;
+            border: 2px dotted black;
+        }
+    </style>
 </head>
 
 <body>
@@ -17,7 +34,36 @@
             });
     </script>
     <div class="content">
-        <h1>Aquí está la informacíon sobre nuestra empresa de publicidad a lo que nos dedicamos</h1>
+        <h1>Aquí está la información sobre nuestra empresa publicista, quienes somos, a lo que nos dedicamos, etc.</h1>
+        <div class="List">
+            <ul>
+                <li><strong>Creador</strong>
+                    <ul>
+                        <li>Nombre: Daniel Jesús Domínguez Porras</li>
+                    </ul>
+                </li>
+                <li><strong>Estudios realizados</strong>
+                    <ul>
+                        <li>Estudios obligatorios</li>
+                        <li>Grado medio: Gestión Administrativa - <a href="https://www.colegiogamarra.com"><strong>GAMARRA</strong></a></li>
+                        <li>Grado superior: Desarrollo de aplicaciones Multiplataforma - <a href="https://medac.es"><strong>MEDAC</strong></a></li>
+                        <li>Grado superior: Desarrollo de aplicaciones Web - <a href="https://iesbelen.org"><strong>IES DE BELÉN</strong></a></li>
+                    </ul>
+                </li>
+                <li><strong>¿Por qué ActualInformados?</strong>
+                    <ul>
+                        <li id="liMaxWidth">Desde que tengo uso de razón, siempre me han inspirado las noticias de fuentes confiables, que no buscan adoctrinarnos en un
+                            pensamiento ideológico ajeno, sino que se centran en informar de manera objetiva, sin fines políticos, religiosos ni ningún tipo de xenofobia, 
+                            homofobia o daño social. En este espacio, presentaremos hechos y datos sobre nuestra actualidad. En ActualInformados, un nombre 
+                            que combina "Actualidad" e "Información", nos comprometemos a mantenerte al tanto de todo lo que sucede en nuestro país.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <footer>
+            <p><strong>ALUMNO: DANIEL JESÚS DOMÍNGUEZ PORRAS 2ºDAW ASIGNATURA: Diseño de interfaces Web</strong></p>
+        </footer>
     </div>
 </body>
 

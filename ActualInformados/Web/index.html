@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        .content {
-            margin-left: 280px;
-            padding: 20px;
-            flex-grow: 1;
-        }
+      .content {
+        margin-left: 280px;
+        padding: 20px;
+        flex-grow: 1;
+      }
+      body {
+        display: flex; 
+      }
+      #sidebar {
+        width: 280px; 
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="sidebar"></div>
     <script>
-        fetch('sideBar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('sidebar').innerHTML = data;
-            });
+      fetch("sideBar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("sidebar").innerHTML = data;
+        });
     </script>
     <div class="content">
-        <h1>Contenido Principal</h1>
-        <p>Aquí se encontrarán las noticias más relevantes del momento.</p>
+      <h1>Contenido Principal</h1>
+      <p>Aquí se encontrarán las noticias más relevantes del momento.</p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/swAoHihziCw"
+        title="Video de YouTube"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
     </div>
-</body>
-
+  </body>
 </html>
