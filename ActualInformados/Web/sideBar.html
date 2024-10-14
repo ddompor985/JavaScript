@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Left Navigation Bar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+        .sidebar h2 {
+            color: #fff;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            transition: background 0.3s;
+        }
+        .sidebar ul li a:hover {
+            background-color: #575757;
+        }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>Menú</h2>
+    <ul>
+        <li><a href="/home">Inicio</a></li>
+        <li><a href="#about">Acerca de</a></li>
+        <li><a href="#services">Servicios</a></li>
+        <li><a href="#contact">Contacto</a></li>
+    </ul>
+</div>
+
+<div class="content">
+    <h1>Contenido Principal</h1>
+    <p>Aquí va el contenido de tu página.</p>
+</div>
+
+</body>
+</html>

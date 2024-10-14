@@ -61,17 +61,21 @@ function showBooksPublishedMoreThanTwoYearsAgo() {
 
 // 4. Nombres de los autores y número de libros que han escrito
 function showAuthorsAndCount() {
-    const authorCount = libros.reduce((acc, libro) => {
+    const authorCount = {};
+
+    libros.forEach(libro => {
         libro.authors.forEach(author => {
-            acc[author] = (acc[author] || 0) + 1;
+            authorCount[author] = (authorCount[author] || 0) + 1;
         });
-        return acc;
-    }, {});
-    
-    outputDiv.innerHTML = `<h3>Autores y número de libros:</h3><ul>${Object.entries(authorCount).map(([author, count]) => {
-        return `<li>${author}: ${count} libro(s)</li>`;
-    }).join('')}</ul>`;
+    });
+
+    let listItems = '';
+    for (const author in authorCount) {
+        listItems += `<li>${author}: ${authorCount[author]} libro(s)</li>`;
+    }
+    outputDiv.innerHTML = `<h3>Autores y número de libros:</h3><ul>${listItems}</ul>`;
 }
+
 
 // 5. Títulos de los libros leídos, ordenados por fecha de publicación
 function showReadBooksOrdered() {
