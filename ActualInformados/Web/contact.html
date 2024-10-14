@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        
+    <style>
+          .content {
+            margin-left: 280px;
+            padding: 20px;
+            flex-grow: 1;
+            max-width: 26%;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="sidebar"></div>
+    <script>
+        fetch('sideBar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebar').innerHTML = data;
+            });
+    </script>
+    <div class="content">
+        <form action="mailto:dominguezporrasdanieljesus@gmail.com" method="POST" enctype="text/plain">
+            <fieldset>
+                <legend>
+                    <b>Datos personales</b>
+                </legend>
+                <table>
+                    <tbody>
+                        <!-- Primera fila -->
+                        <tr>
+                            <td><b>D.N.I:</b></td>
+                            <td>
+                                <input name="dni" aria-describedby="DNI" size="5">
+                            </td>
+                            <td></td>
+                            <td><b>Sexo:</b></td>
+                        </tr>
+
+                        <!-- Segunda fila -->
+                        <tr>
+                            <td><b>Nombre:</b></td>
+                            <td>
+                                <input name="nombre" aria-describedby="Nombres" size="20">
+                            </td>
+                            <td></td>
+                            <td><input type="radio" name="sexo" value="Hombre"> Hombre</td>
+                        </tr>
+
+                        <!-- Tercera fila -->
+                        <tr>
+                            <td><b>Apellido</b></td>
+                            <td>
+                                <input name="apellido" aria-describedby="Apellido" size="35">
+                            </td>
+                            <td></td>
+                            <td><input type="radio" name="sexo" value="Mujer"> Mujer</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <b>Dirección</b>
+                </legend>
+                <table>
+                    <tbody>
+                        <!-- Primera fila -->
+                        <tr>
+                            <td><b>Calle/Avda: </b></td>
+                            <td colspan="3">
+                                <input name="calle" aria-describedby="Calle/Avda" size="46">
+                            </td>
+                        </tr>
+
+                        <!-- Segunda fila -->
+                        <tr>
+                            <td><b>Población:</b></td>
+                            <td>
+                                <input name="poblacion" aria-describedby="Población" size="24">
+                            </td>
+                            <td><b>Provincia:</b></td>
+                            <td>
+                                <label for="lang"></label>
+                                <select name="provincia" id="lang">
+                                    <option value="Almería">Almería</option>
+                                    <option value="Jaén">Jaén</option>
+                                    <option value="Murcia">Murcia</option>
+                                    <option value="Málaga">Málaga</option>
+                                    <option value="Granada">Granada</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <b> Información de la incidencia</b>
+                </legend>
+                <table>
+                    <tbody>
+                        <!-- Primera fila -->
+                        <tr>
+                            <td><b>Archivo si requiriese:</b></td>
+                            <td>
+                                <input name="archivo" aria-describedby="Archivo" size="25" type="text" readonly>
+                            </td>
+                            <td>
+                                <input hidden id="btn" type="file"
+                                    onChange="document.querySelector('input[name=archivo]').value = this.files[0].name;">
+                                <button type="button" id='personalizado'
+                                    onClick="document.getElementById('btn').click();">Browse</button>
+                            </td>
+                            <td></td>
+                        </tr>
+
+                        <!-- Segunda fila -->
+                        <tr>
+                            <td><input type="checkbox" name="archivo_comprimido">Archivo comprimido</td>
+                            <td colspan="2">
+                                <input type="checkbox" name="archivo_encriptado">Archivo encriptado
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><b>Descripción de la incidencia</b></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><textarea name="descripcion" maxlength="244" id="" cols="56px"
+                                    rows="5px"></textarea></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+
+            <div class="submit-container">
+                <input type="submit" value="Submit Query">
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>

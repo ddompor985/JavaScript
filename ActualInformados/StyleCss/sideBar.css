@@ -15,12 +15,6 @@ body {
     overflow-y: auto;
 }
 
-.content {
-    margin-left: 280px;
-    padding: 20px; 
-    flex-grow: 1; 
-}
-
 .sidebar h2 {
     color: #fff;
 }
