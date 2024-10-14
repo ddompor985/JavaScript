@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      .content {
-        margin-left: 280px;
-        padding: 20px;
-        flex-grow: 1;
-      }
-      body {
-        display: flex; 
-      }
-      #sidebar {
-        width: 280px; 
-      }
-    </style>
-  </head>
 
-  <body>
-    <div id="sidebar"></div>
-    <script>
-      fetch("sideBar.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("sidebar").innerHTML = data;
-        });
-    </script>
-    <div class="content">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .content {
+      margin-left: 280px;
+      padding: 20px;
+      flex-grow: 1;
+    }
+
+    body {
+      display: flex;
+    }
+
+    #sidebar {
+      width: 280px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="sidebar"></div>
+  <script>
+    fetch("sideBar.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("sidebar").innerHTML = data;
+      });
+  </script>
+  <div class="content">
+    <div id="firstNew">
       <h1>Contenido Principal</h1>
       <p>Aquí se encontrarán las noticias más relevantes del momento.</p>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/swAoHihziCw"
-        title="Video de YouTube"
-        frameborder="0"
-        allowfullscreen
-      ></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/swAoHihziCw" title="Video de YouTube"
+        frameborder="0" allowfullscreen></iframe>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

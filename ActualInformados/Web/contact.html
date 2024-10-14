@@ -1,201 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
     <style>
-      .content {
-        margin-left: 280px;
-        padding: 20px;
-        flex-grow: 1;
-        max-width: 26%;
-      }
-      body {
-        display: flex;
-      }
-      table {
-        width: 100%; 
-      }
-    </style>
-  </head>
+        .content {
+            margin-left: 280px;
+            padding: 20px;
+            flex-grow: 1;
+            max-width: 40%;
+        }
 
-  <body>
+        body {
+            display: flex;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Mejora el estilo de la tabla */
+        }
+
+        th, td {
+            border: 2px solid black; /* Añade borde a celdas */
+            padding: 8px; /* Añade espaciado interno */
+            text-align: left; /* Alineación de texto */
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .submit-container {
+            margin-top: 20px; /* Añade un margen superior */
+        }
+    </style>
+</head>
+
+<body>
     <div id="sidebar"></div>
     <script>
-      fetch("sideBar.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("sidebar").innerHTML = data;
-        });
+        fetch("sideBar.html")
+            .then((response) => response.text())
+            .then((data) => {
+                document.getElementById("sidebar").innerHTML = data;
+            });
     </script>
     <div class="content">
-      <form
-        action="mailto:dominguezporrasdanieljesus@gmail.com"
-        method="POST"
-        enctype="text/plain"
-      >
-        <fieldset>
-          <legend><strong>Datos personales</strong></legend>
-          <table>
-            <tbody>
-              <tr>
-                <td><strong>D.N.I:</strong></td>
-                <td>
-                  <input
-                    name="dni"
-                    aria-labelledby="dni-label"
-                    size="5"
-                    required
-                  />
-                </td>
-                <td></td>
-                <td><strong>Sexo:</strong></td>
-              </tr>
-              <tr>
-                <td><strong>Nombre:</strong></td>
-                <td>
-                  <input
-                    name="nombre"
-                    aria-labelledby="nombre-label"
-                    size="20"
-                    required
-                  />
-                </td>
-                <td></td>
-                <td>
-                  <input type="radio" name="sexo" value="Hombre" required />
-                  Hombre
-                </td>
-              </tr>
-              <tr>
-                <td><strong>Apellido:</strong></td>
-                <td>
-                  <input
-                    name="apellido"
-                    aria-labelledby="apellido-label"
-                    size="35"
-                    required
-                  />
-                </td>
-                <td></td>
-                <td><input type="radio" name="sexo" value="Mujer" /> Mujer</td>
-              </tr>
-            </tbody>
-          </table>
-        </fieldset>
+        <h1>
+            Cualquier consulta que su persona requiera, será atendida lo antes posible
+        </h1>
+        <form action="mailto:dominguezporrasdanieljesus@gmail.com" method="POST" enctype="text/plain">
+            <fieldset>
+                <legend><strong>Datos personales</strong></legend>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><strong>D.N.I:</strong></td>
+                            <td>
+                                <input name="dni" size="5" required />
+                            </td>
+                            <td><strong>Sexo:</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Nombre:</strong></td>
+                            <td>
+                                <input name="nombre" size="20" required />
+                            </td>
+                            <td>
+                                <input type="radio" name="sexo" value="Hombre" required />
+                                Hombre
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Apellido:</strong></td>
+                            <td>
+                                <input name="apellido" size="35" required />
+                            </td>
+                            <td>
+                                <input type="radio" name="sexo" value="Mujer" /> Mujer
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
 
-        <fieldset>
-          <legend><strong>Dirección</strong></legend>
-          <table>
-            <tbody>
-              <tr>
-                <td><strong>Calle/Avda:</strong></td>
-                <td colspan="3">
-                  <input
-                    name="calle"
-                    aria-labelledby="calle-label"
-                    size="46"
-                    required
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td><strong>Población:</strong></td>
-                <td>
-                  <input
-                    name="poblacion"
-                    aria-labelledby="poblacion-label"
-                    size="24"
-                    required
-                  />
-                </td>
-                <td><strong>Provincia:</strong></td>
-                <td>
-                  <select name="provincia" id="provincia" required>
-                    <option value="" disabled selected>
-                      Selecciona una provincia
-                    </option>
-                    <option value="Almería">Almería</option>
-                    <option value="Jaén">Jaén</option>
-                    <option value="Murcia">Murcia</option>
-                    <option value="Málaga">Málaga</option>
-                    <option value="Granada">Granada</option>
-                  </select>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </fieldset>
+            <fieldset>
+                <legend><strong>Dirección</strong></legend>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><strong>Calle/Avda:</strong></td>
+                            <td colspan="3">
+                                <input name="calle" size="46" required />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Población:</strong></td>
+                            <td>
+                                <input name="poblacion" size="24" required />
+                            </td>
+                            <td><strong>Provincia:</strong></td>
+                            <td>
+                                <select name="provincia" id="provincia" required>
+                                    <option value="" disabled selected>
+                                        Selecciona una provincia
+                                    </option>
+                                    <option value="Almería">Almería</option>
+                                    <option value="Jaén">Jaén</option>
+                                    <option value="Murcia">Murcia</option>
+                                    <option value="Málaga">Málaga</option>
+                                    <option value="Granada">Granada</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
 
-        <fieldset>
-          <legend><strong>Información de la incidencia</strong></legend>
-          <table>
-            <tbody>
-              <tr>
-                <td><strong>Archivo si requiriese:</strong></td>
-                <td>
-                  <input
-                    name="archivo"
-                    aria-labelledby="archivo-label"
-                    size="25"
-                    type="text"
-                    readonly
-                  />
-                </td>
-                <td>
-                  <input
-                    hidden
-                    id="btn"
-                    type="file"
-                    onChange="document.querySelector('input[name=archivo]').value = this.files[0].name;"
-                  />
-                  <button
-                    type="button"
-                    id="personalizado"
-                    onClick="document.getElementById('btn').click();"
-                  >
-                    Browse
-                  </button>
-                </td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <input type="checkbox" name="archivo_comprimido" /> Archivo
-                  comprimido
-                </td>
-                <td colspan="2">
-                  <input type="checkbox" name="archivo_encriptado" /> Archivo
-                  encriptado
-                </td>
-                <td></td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <strong>Descripción de la incidencia</strong>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="3">
-                  <textarea
-                    name="descripcion"
-                    maxlength="244"
-                    cols="56"
-                    rows="5"
-                    required
-                  ></textarea>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </fieldset>
+            <fieldset>
+                <legend><strong>Información de la incidencia</strong></legend>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><strong>Archivo si requiriese:</strong></td>
+                            <td>
+                                <input name="archivo" size="25" type="text" readonly />
+                            </td>
+                            <td>
+                                <input
+                                    hidden
+                                    id="btn"
+                                    type="file"
+                                    onChange="document.querySelector('input[name=archivo]').value = this.files[0].name;"
+                                />
+                                <button
+                                    type="button"
+                                    id="personalizado"
+                                    onClick="document.getElementById('btn').click();"
+                                >
+                                    Browse
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="archivo_comprimido" /> Archivo comprimido
+                            </td>
+                            <td colspan="2">
+                                <input type="checkbox" name="archivo_encriptado" /> Archivo encriptado
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <strong>Descripción de la incidencia</strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <textarea name="descripcion" maxlength="500" cols="92" rows="6" required></textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
 
-        <div class="submit-container">
-          <input type="submit" value="Submit Query" />
-        </div>
-      </form>
+            <div class="submit-container">
+                <input type="submit" value="Submit Query" />
+            </div>
+        </form>
+
+        <br /><br /><br />
+        <h3>Horario de atención al cliente</h3>
+        <table id="tableTime"> <!-- Corregido el ID -->
+            <tr>
+                <td colspan="2"><strong>Lunes-Viernes</strong></td>
+                <td><strong>Findes y festivos</strong></td>
+            </tr>
+            <tr>
+                <td>Atención al cliente</td>
+                <td>9:00-14:00</td>
+                <td rowspan="2">Descanso, espere al lunes para ser atendido</td>
+            </tr>
+            <tr>
+                <td>Atención al cliente</td>
+                <td>15:00-17:00</td>
+            </tr>
+        </table>
     </div>
-  </body>
+</body>
 </html>
