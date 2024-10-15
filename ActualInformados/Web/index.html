@@ -5,21 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
-  <style>
-    .content {
-      margin-left: 280px;
-      padding: 20px;
-      flex-grow: 1;
-    }
-
-    body {
-      display: flex;
-    }
-
-    #sidebar {
-      width: 280px;
-    }
-  </style>
+  <link rel="stylesheet" href="../StyleCss/styles.css">
 </head>
 
 <body>
@@ -31,14 +17,45 @@
         document.getElementById("sidebar").innerHTML = data;
       });
   </script>
-  <div class="content">
-    <div id="firstNew">
-      <h1>Contenido Principal</h1>
-      <p>Aquí se encontrarán las noticias más relevantes del momento.</p>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/swAoHihziCw" title="Video de YouTube"
-        frameborder="0" allowfullscreen></iframe>
+  <div class="contentIndex">
+
+    <h1>Contenido Principal</h1>
+    <p>Aquí se encontrarán las noticias más relevantes del momento.</p>
+    <div id="buscador">
+      <input type="text" id="searchInput" placeholder="Buscar..." />
+      <button onclick="searchText()">Buscar</button>
+      <div id="result"></div>
+    </div>
+    <div id="newsSection">
+      <div id="firstNew">
+        <h2>Elon Musk revoluciona a la sociedad informatica con sus nuevos robot tesla</h3>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/swAoHihziCw" title="Video de YouTube"
+            frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div id="firstNew">
+        <h2>Elon Musk revoluciona a la sociedad informatica con sus nuevos robot tesla</h3>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/swAoHihziCw" title="Video de YouTube"
+            frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div id="firstNew">
+        <h2>Elon Musk revoluciona a la sociedad informatica con sus nuevos robot tesla</h3>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/swAoHihziCw" title="Video de YouTube"
+            frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div id="firstNew">
+        <h2>Elon Musk revoluciona a la sociedad informatica con sus nuevos robot tesla</h3>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/swAoHihziCw" title="Video de YouTube"
+            frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div id="firstNew">
+        <h2>Elon Musk revoluciona a la sociedad informatica con sus nuevos robot tesla</h3>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/swAoHihziCw" title="Video de YouTube"
+            frameborder="0" allowfullscreen></iframe>
+      </div>
+
     </div>
   </div>
+  <script src="../Code/Code.js"></script>
 </body>
 
 </html>

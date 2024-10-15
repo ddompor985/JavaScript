@@ -1,41 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <style>
-        .content {
-            margin-left: 280px;
-            padding: 20px;
-            flex-grow: 1;
-            max-width: 40%;
-        }
-
-        body {
-            display: flex;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse; /* Mejora el estilo de la tabla */
-        }
-
-        th, td {
-            border: 2px solid black; /* Añade borde a celdas */
-            padding: 8px; /* Añade espaciado interno */
-            text-align: left; /* Alineación de texto */
-        }
-
-        textarea {
-            resize: none;
-        }
-
-        .submit-container {
-            margin-top: 20px; /* Añade un margen superior */
-        }
-    </style>
+    <link rel="stylesheet" href="../StyleCss/styles.css">
 </head>
 
 <body>
@@ -47,11 +18,11 @@
                 document.getElementById("sidebar").innerHTML = data;
             });
     </script>
-    <div class="content">
+    <div class="contentContact">
         <h1>
             Cualquier consulta que su persona requiera, será atendida lo antes posible
         </h1>
-        <form action="mailto:dominguezporrasdanieljesus@gmail.com" method="POST" enctype="text/plain">
+        <form action="mailto:dominguezporrasdanieljesus@gmail.com" method="POST" enctype="text/plain" id="formIncidencia">
             <fieldset>
                 <legend><strong>Datos personales</strong></legend>
                 <table>
@@ -85,40 +56,6 @@
                     </tbody>
                 </table>
             </fieldset>
-
-            <fieldset>
-                <legend><strong>Dirección</strong></legend>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td><strong>Calle/Avda:</strong></td>
-                            <td colspan="3">
-                                <input name="calle" size="46" required />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><strong>Población:</strong></td>
-                            <td>
-                                <input name="poblacion" size="24" required />
-                            </td>
-                            <td><strong>Provincia:</strong></td>
-                            <td>
-                                <select name="provincia" id="provincia" required>
-                                    <option value="" disabled selected>
-                                        Selecciona una provincia
-                                    </option>
-                                    <option value="Almería">Almería</option>
-                                    <option value="Jaén">Jaén</option>
-                                    <option value="Murcia">Murcia</option>
-                                    <option value="Málaga">Málaga</option>
-                                    <option value="Granada">Granada</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </fieldset>
-
             <fieldset>
                 <legend><strong>Información de la incidencia</strong></legend>
                 <table>
@@ -129,17 +66,10 @@
                                 <input name="archivo" size="25" type="text" readonly />
                             </td>
                             <td>
-                                <input
-                                    hidden
-                                    id="btn"
-                                    type="file"
-                                    onChange="document.querySelector('input[name=archivo]').value = this.files[0].name;"
-                                />
-                                <button
-                                    type="button"
-                                    id="personalizado"
-                                    onClick="document.getElementById('btn').click();"
-                                >
+                                <input hidden id="btn" type="file"
+                                    onChange="document.querySelector('input[name=archivo]').value = this.files[0].name;" />
+                                <button type="button" id="personalizado"
+                                    onClick="document.getElementById('btn').click();">
                                     Browse
                                 </button>
                             </td>
@@ -190,4 +120,5 @@
         </table>
     </div>
 </body>
+
 </html>

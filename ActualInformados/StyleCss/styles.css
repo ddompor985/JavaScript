@@ -1,0 +1,61 @@
+/*CSS CONJUNTO*/
+
+body{
+    width: auto;
+    height: auto;
+}
+
+/*INDEX*/
+.contentIndex {
+    
+}
+
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/*CONTACT*/
+
+.contentContact {
+    margin-left: 15%;}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Mejora el estilo de la tabla */
+}
+#formIncidencia{
+    width: auto;
+    height: auto;
+    
+}
+
+
+th, td {
+    border: 2px solid black; /* Añade borde a celdas */
+    padding: 8px; /* Añade espaciado interno */
+    text-align: left; /* Alineación de texto */
+}
+
+textarea {
+    resize: none;
+}
+
+.submit-container {
+    margin-top: 20px; /* Añade un margen superior */
+}
+
+
+/*ABOUT US*/
+.contentAbout{
+    margin-left: 15%;
+}
+
+footer {
+    background-color: #f1f1f1; 
+    text-align: center;
+    padding: 10px 0;
+    border: 2px dotted black;
+}
