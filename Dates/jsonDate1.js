@@ -8,4 +8,4 @@ const week = {
     7: "Sunday",
 }
 
-console.log(week[2]);
+console.log(week[1]);
