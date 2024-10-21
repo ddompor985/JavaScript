@@ -1,0 +1,19 @@
+.container {
+    background-color: aqua;
+    width: 180px;
+    height: 180px;
+    position: relative;
+    text-align: center;
+}
+.container:hover {
+    background-color:blue ;
+    font-size: x-large;
+    color: brown;
+    line-height: 1.5cm;
+    border-radius: 6%;
+    box-shadow:0 4px 6px black ;
+    opacity: 50%;
+    border:black 0.09cm dashed;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: underline;
+}
