@@ -7,7 +7,7 @@ body{
 
 /*INDEX*/
 .contentIndex {
-    
+    margin-left: 15%;
 }
 
 
@@ -19,7 +19,8 @@ body{
 /*CONTACT*/
 
 .contentContact {
-    margin-left: 15%;}
+    margin-left: 15%;
+}
 
 
 table {
