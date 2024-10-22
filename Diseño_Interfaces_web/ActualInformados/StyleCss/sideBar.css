@@ -7,10 +7,11 @@ body {
 .sidebar {
     width: 250px;
     height: 100vh;
-    background-color: #001F3F;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,31,63,0.9822303921568627) 50%, rgba(58,109,140,1) 94%);
     color: white;
     padding: 15px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 0 5px #3A6D8C;
     position: fixed;
 }
 
@@ -37,5 +38,5 @@ body {
 }
 
 .sidebar ul li a:hover {
-    background-color: #575757;
-}
+background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,77,152,1) 50%, rgba(58,109,140,1) 94%);}

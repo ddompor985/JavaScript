@@ -1,25 +1,66 @@
 /*CSS CONJUNTO*/
-
 body{
     width: auto;
     height: auto;
+    background-color: #3A6D8C;
 }
 
 /*INDEX*/
 .contentIndex {
-    margin-left: 15%;
+    margin-left: 20%;
 }
 
-
+p,h2,h1{
+    color: rgb(234,216,177);
+}
 .highlight {
-    background-color: yellow;
+    background-color: rgb(234,216,177);
     font-weight: bold;
+}
+.new {
+    background-color: #6A9AB0;
+    border-radius: 2%;
+    box-shadow: 0 3px 22px black;
+    padding: 20px;
+}
+
+/* Animación bouncing */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Estilo del botón y animación */
+.btn-bounce {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #6A9AB0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+    margin-top: 20px; 
+}
+.btn-bounce{
+    margin-top: 20%;
+}
+.btn-bounce:hover {
+    background-color: #3A6D8C;
 }
 
 /*CONTACT*/
 
 .contentContact {
-    margin-left: 15%;
+    margin-left: 20%;
 }
 
 
@@ -35,9 +76,9 @@ table {
 
 
 th, td {
-    border: 2px solid black; /* Añade borde a celdas */
-    padding: 8px; /* Añade espaciado interno */
-    text-align: left; /* Alineación de texto */
+    border: 2px solid black; 
+    padding: 8px; 
+    text-align: left; 
 }
 
 textarea {
@@ -45,18 +86,22 @@ textarea {
 }
 
 .submit-container {
-    margin-top: 20px; /* Añade un margen superior */
+    margin-top: 20px; 
 }
 
 
 /*ABOUT US*/
+
 .contentAbout{
     margin-left: 15%;
 }
 
+
 footer {
-    background-color: #f1f1f1; 
+    margin-top: auto;
+    background-color: rgb(234,216,177); 
     text-align: center;
     padding: 10px 0;
     border: 2px dotted black;
+    margin-left: 0%;
 }
