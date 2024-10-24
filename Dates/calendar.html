@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Days Timeline</title>
+    <style>
+        .timeline {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .day {
+            padding: 10px;
+            margin: 5px;
+            text-align: center;
+            width: 50px;
+            border-radius: 5px;
+        }
+
+        .school-day {
+            background-color: lightgreen;
+        }
+
+        .weekend {
+            background-color: lightcoral;
+        }
+
+        .date {
+            font-size: 12px;
+        }
+
+        .day-name {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>School Days Timeline</h1>
+    <div id="timeline" class="timeline"></div>
+
+    <script>
+        // Function to calculate the number of school days remaining
+        function calculateSchoolDays(startDate, endDate) {
+            const schoolDays = [];
+            let currentDate = new Date(startDate);
+
+            while (currentDate <= new Date(endDate)) {
+                const dayOfWeek = currentDate.getDay(); // Sunday - 0, Monday - 1, ..., Saturday - 6
+                schoolDays.push({
+                    date: currentDate.toLocaleDateString('en-GB'),
+                    dayName: currentDate.toLocaleDateString('en-GB', { weekday: 'short' }),
+                    isSchoolDay: dayOfWeek >= 1 && dayOfWeek <= 5 // Monday to Friday are school days
+                });
+                // Move to the next day
+                currentDate.setDate(currentDate.getDate() + 1);
+            }
+
+            return schoolDays;
+        }
+
+        // Function to display the timeline
+        function displayTimeline(schoolDays) {
+            const timelineElement = document.getElementById('timeline');
+
+            schoolDays.forEach(day => {
+                const dayElement = document.createElement('div');
+                dayElement.classList.add('day');
+
+                if (day.isSchoolDay) {
+                    dayElement.classList.add('school-day');
+                } else {
+                    dayElement.classList.add('weekend');
+                }
+
+                dayElement.innerHTML = `
+                    <div class="day-name">${day.dayName}</div>
+                    <div class="date">${day.date}</div>
+                `;
+                timelineElement.appendChild(dayElement);
+            });
+        }
+
+        // Example usage
+        const startDate = '2024-10-01'; // Start date (YYYY-MM-DD)
+        const endDate = '2024-10-18';   // End date (YYYY-MM-DD)
+
+        const schoolDays = calculateSchoolDays(startDate, endDate);
+        displayTimeline(schoolDays);
+    </script>
+</body>
+</html>
