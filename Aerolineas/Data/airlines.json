@@ -1,0 +1,163 @@
+{
+    "Madrid": {
+        "airlines": [
+            {
+                "name": "Iberia",
+                "flights": [
+                    {
+                        "flight_id": "IB123",
+                        "destination": "Barcelona",
+                        "time": "12:00",
+                        "duration": "1h 30m",
+                        "fares": {
+                            "economy": 120,
+                            "business": 350
+                        }
+                    },
+                    {
+                        "flight_id": "IB456",
+                        "destination": "London",
+                        "time": "15:00",
+                        "duration": "2h 10m",
+                        "fares": {
+                            "economy": 180,
+                            "business": 450
+                        }
+                    }
+                ],
+                "alliances": ["Oneworld"]
+            },
+            {
+                "name": "Ryanair",
+                "flights": [
+                    {
+                        "flight_id": "FR789",
+                        "destination": "Valencia",
+                        "time": "18:30",
+                        "duration": "1h",
+                        "fares": {
+                            "economy": 40,
+                            "extra_baggage": 20
+                        }
+                    }
+                ],
+                "alliances": [],
+                "services": ["Low-cost", "Online check-in"]
+            }
+        ]
+    },
+    "Barcelona": {
+        "airlines": [
+            {
+                "name": "Vueling",
+                "flights": [
+                    {
+                        "flight_id": "VY321",
+                        "destination": "Seville",
+                        "time": "09:00",
+                        "duration": "1h 45m",
+                        "fares": {
+                            "economy": 75,
+                            "business": 200
+                        }
+                    }
+                ],
+                "alliances": ["IAG Group"],
+                "special_offers": ["Summer discount", "2x1 on baggage"]
+            },
+            {
+                "name": "EasyJet",
+                "flights": [
+                    {
+                        "flight_id": "EJ654",
+                        "destination": "Lisbon",
+                        "time": "17:00",
+                        "duration": "1h 20m",
+                        "fares": {
+                            "economy": 90
+                        }
+                    }
+                ],
+                "alliances": [],
+                "extras": ["Mobile boarding pass", "Priority boarding"]
+            }
+        ]
+    },
+    "Seville": {
+        "airlines": [
+            {
+                "name": "Air Europa",
+                "flights": [
+                    {
+                        "flight_id": "AE987",
+                        "destination": "Bilbao",
+                        "time": "20:00",
+                        "duration": "1h 15m",
+                        "fares": {
+                            "economy": 130,
+                            "business": 300
+                        }
+                    }
+                ],
+                "alliances": ["SkyTeam"],
+                "loyalty_programs": ["Suma"]
+            }
+        ]
+    },
+    "Malaga": {
+        "airlines": [
+            {
+                "name": "Norwegian",
+                "flights": [
+                    {
+                        "flight_id": "DY200",
+                        "destination": "Oslo",
+                        "time": "14:30",
+                        "duration": "4h 10m",
+                        "fares": {
+                            "economy": 150,
+                            "business": 400
+                        }
+                    },
+                    {
+                        "flight_id": "DY201",
+                        "destination": "Stockholm",
+                        "time": "10:00",
+                        "duration": "3h 45m",
+                        "fares": {
+                            "economy": 130,
+                            "business": 380
+                        }
+                    }
+                ],
+                "alliances": [],
+                "services": ["Free Wi-Fi", "Onboard entertainment"]
+            },
+            {
+                "name": "Jet2",
+                "flights": [
+                    {
+                        "flight_id": "LS700",
+                        "destination": "Manchester",
+                        "time": "13:00",
+                        "duration": "2h 30m",
+                        "fares": {
+                            "economy": 90
+                        }
+                    },
+                    {
+                        "flight_id": "LS701",
+                        "destination": "Leeds",
+                        "time": "16:00",
+                        "duration": "2h 45m",
+                        "fares": {
+                            "economy": 85
+                        }
+                    }
+                ],
+                "alliances": [],
+                "services": ["Low-cost flight", "Onboard snack"]
+            }
+        ]
+    }
+}
